@@ -1,6 +1,6 @@
 const Nav = () => (
-  <nav className="h-10 w-full bg-green-400">
-    <div>Nav</div>
+  <nav className="h-10 w-full bg-green-500 flex items-center">
+    <div className="pl-2">POKEMONS</div>
   </nav>
 );
 

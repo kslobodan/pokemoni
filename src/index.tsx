@@ -4,6 +4,8 @@ import App from './App';
 import { ThemeProvider } from './components/theme-provider';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -11,9 +13,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider>
+      {/* <Provider store={store}> */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
+      {/* </Provider> */}
     </ThemeProvider>
   </React.StrictMode>,
 );
