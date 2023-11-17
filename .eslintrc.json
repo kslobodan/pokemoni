@@ -19,6 +19,17 @@
       {
         "namedComponents": "function-declaration"
       }
+    ],
+    "import/order": [
+      "warn", // Change severity to "warn"
+      {
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always"
+      }
     ]
   }
 }
