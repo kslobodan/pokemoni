@@ -4,7 +4,9 @@ type Theme = 'dark' | 'light' | 'system';
 
 type ThemeProviderProps = {
   children: React.ReactNode;
+  // eslint-disable-next-line react/require-default-props
   defaultTheme?: Theme;
+  // eslint-disable-next-line react/require-default-props
   storageKey?: string;
 };
 
@@ -48,8 +50,10 @@ export function ThemeProvider({
     root.classList.add(theme);
   }, [theme]);
 
+  // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
     theme,
+    // eslint-disable-next-line no-shadow
     setTheme: (theme: Theme) => {
       localStorage.setItem(storageKey, theme);
       setTheme(theme);
@@ -57,6 +61,7 @@ export function ThemeProvider({
   };
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
     </ThemeProviderContext.Provider>

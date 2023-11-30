@@ -16,6 +16,7 @@ export const MainSlice = createSlice({
       state,
       action: PayloadAction<{ isAuthenticated: boolean }>,
     ) => {
+      // eslint-disable-next-line no-param-reassign
       state.isAuthenticated = action.payload.isAuthenticated;
     },
   },
